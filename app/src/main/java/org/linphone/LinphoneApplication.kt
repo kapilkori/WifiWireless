@@ -34,7 +34,7 @@ import org.linphone.core.*
 import org.linphone.core.tools.Log
 import org.linphone.mediastream.Version
 
-class LinphoneApplication : Application() {
+class LinphoneApplication : Application(), ImageLoaderFactory {
     companion object {
         @SuppressLint("StaticFieldLeak")
         lateinit var corePreferences: CorePreferences
@@ -42,16 +42,16 @@ class LinphoneApplication : Application() {
         @SuppressLint("StaticFieldLeak")
         lateinit var coreContext: CoreContext
 
-        public fun createConfig(context: Context) {
+        fun createConfig(context: Context) {
             if (::corePreferences.isInitialized) {
                 return
             }
 
-//            Factory.instance().setLogCollectionPath(context.filesDir.absolutePath)
-//            Factory.instance().enableLogCollection(LogCollectionState.Enabled)
+            Factory.instance().setLogCollectionPath(context.filesDir.absolutePath)
+            Factory.instance().enableLogCollection(LogCollectionState.Enabled)
 
             // For VFS
-//            Factory.instance().setCacheDir(context.cacheDir.absolutePath)
+            Factory.instance().setCacheDir(context.cacheDir.absolutePath)
 
             corePreferences = CorePreferences(context)
             corePreferences.copyAssetsFromPackage()
@@ -60,18 +60,18 @@ class LinphoneApplication : Application() {
                 CoreContext.activateVFS()
             }
 
-//            val config = Factory.instance().createConfigWithFactory(
-//                corePreferences.configPath,
-//                corePreferences.factoryConfigPath
-//            )
-//            corePreferences.config = config
+            val config = Factory.instance().createConfigWithFactory(
+                corePreferences.configPath,
+                corePreferences.factoryConfigPath
+            )
+            corePreferences.config = config
 
-//            val appName = context.getString(R.string.app_name)
-//            Factory.instance().setLoggerDomain(appName)
-//            Factory.instance().enableLogcatLogs(corePreferences.logcatLogsOutput)
-//            if (corePreferences.debugLogs) {
-//                Factory.instance().loggingService.setLogLevel(LogLevel.Message)
-//            }
+            val appName = context.getString(R.string.app_name)
+            Factory.instance().setLoggerDomain(appName)
+            Factory.instance().enableLogcatLogs(corePreferences.logcatLogsOutput)
+            if (corePreferences.debugLogs) {
+                Factory.instance().loggingService.setLogLevel(LogLevel.Message)
+            }
 
             Log.i("[Application] Core config & preferences created")
         }
@@ -110,34 +110,34 @@ class LinphoneApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-//        val appName = getString(R.string.app_name)
-//        android.util.Log.i("[$appName]", "Application is being created")
+        val appName = getString(R.string.app_name)
+        android.util.Log.i("[$appName]", "Application is being created")
         createConfig(applicationContext)
         Log.i("[Application] Created")
     }
 
-//    override fun newImageLoader(): ImageLoader {
-//        return ImageLoader.Builder(this)
-//            .components {
-//                add(VideoFrameDecoder.Factory())
-//                add(SvgDecoder.Factory())
-//                if (Version.sdkAboveOrEqual(Version.API28_PIE_90)) {
-//                    add(ImageDecoderDecoder.Factory())
-//                } else {
-//                    add(GifDecoder.Factory())
-//                }
-//            }
-//            .memoryCache {
-//                MemoryCache.Builder(this)
-//                    .maxSizePercent(0.25)
-//                    .build()
-//            }
-//            .diskCache {
-//                DiskCache.Builder()
-//                    .directory(cacheDir.resolve("image_cache"))
-//                    .maxSizePercent(0.02)
-//                    .build()
-//            }
-//            .build()
-//    }
+    override fun newImageLoader(): ImageLoader {
+        return ImageLoader.Builder(this)
+            .components {
+                add(VideoFrameDecoder.Factory())
+                add(SvgDecoder.Factory())
+                if (Version.sdkAboveOrEqual(Version.API28_PIE_90)) {
+                    add(ImageDecoderDecoder.Factory())
+                } else {
+                    add(GifDecoder.Factory())
+                }
+            }
+            .memoryCache {
+                MemoryCache.Builder(this)
+                    .maxSizePercent(0.25)
+                    .build()
+            }
+            .diskCache {
+                DiskCache.Builder()
+                    .directory(cacheDir.resolve("image_cache"))
+                    .maxSizePercent(0.02)
+                    .build()
+            }
+            .build()
+    }
 }

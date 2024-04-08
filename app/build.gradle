@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.library'
+    id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'org.jlleitschuh.gradle.ktlint' version '11.3.1'
@@ -22,6 +22,7 @@ android {
     compileSdk 34
     defaultConfig {
         minSdk 23
+        applicationId 'org.linphone'
         buildConfigField("long", "VERSION_CODE", "1")
         buildConfigField("String","VERSION_NAME",'"1.0.0"')
         buildConfigField("String","APPLICATION_ID","\"${packageName}\"")
@@ -124,15 +125,15 @@ ktlint {
 
 project.tasks['preBuild'].dependsOn 'ktlintFormat'
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.kapilkori'
-                artifactId = 'wifi-wireless'
-                version = '0.0.5'
-            }
-        }
-    }
-}
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            release(MavenPublication) {
+//                from components.release
+//                groupId = 'com.github.kapilkori'
+//                artifactId = 'wifi-wireless'
+//                version = '0.0.5'
+//            }
+//        }
+//    }
+//}
