@@ -131,7 +131,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.kapilkori'
                 artifactId = 'wifi-wireless'
-                version = '0.0.1'
+                version = '0.0.5'
             }
         }
     }
