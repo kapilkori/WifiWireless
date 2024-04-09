@@ -70,6 +70,7 @@ dependencies {
     implementation 'androidx.media:media:1.6.0'
     implementation "androidx.security:security-crypto-ktx:1.1.0-alpha06"
     implementation "androidx.window:window:1.2.0"
+    implementation files('/libs/linphone 5.2.23.aar')
 
     def emoji_version = "1.4.0"
     implementation "androidx.emoji2:emoji2:$emoji_version"
@@ -100,7 +101,7 @@ dependencies {
     // https://github.com/Baseflow/PhotoView/blob/master/LICENSE Apache v2.0
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
 
-    implementation 'org.linphone:linphone-sdk-android:5.3.40'
+//    implementation 'org.linphone:linphone-sdk-android:5.3.23'
 
     // Only enable leak canary prior to release
     // debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.10'
@@ -127,14 +128,13 @@ ktlint {
 project.tasks['preBuild'].dependsOn 'ktlintFormat'
 
 afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = 'com.github.kapilkori'
-                artifactId = 'wifi-wireless'
-                version = '0.0.9'
-            }
+    android.libraryVariants.forEach { variant ->
+        publishing.publications.register(variant.name, MavenPublication) {
+            from components.findByName(variant.name)
+
+            groupId = 'com.github.kapilkori'
+            artifactId = 'WW'
+            version = '0.0.7'
         }
     }
 }
