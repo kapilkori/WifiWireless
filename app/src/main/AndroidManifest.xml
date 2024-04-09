@@ -59,7 +59,6 @@
     <application
         android:enableOnBackInvokedCallback="true"
         android:icon="@mipmap/ic_launcher"
-        android:theme="@style/BaseAppTheme"
         android:localeConfig="@xml/locales_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:allowNativeHeapPointerTagging="false">
