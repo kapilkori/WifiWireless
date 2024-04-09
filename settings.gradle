@@ -5,19 +5,20 @@ dependencyResolutionManagement {
         maven { url "https://plugins.gradle.org/m2/" }
         maven { url "https://www.jitpack.io" } // for com.github.chrisbanes:PhotoView
 
-        maven {
-            name "local linphone-sdk maven repository"
-            url file(LinphoneSdkBuildDir + '/maven_repository/')
-            content {
-                includeGroup "org.linphone"
-            }
-        }
-
-        maven { url "https://linphone.org/maven_repository"}
+//        maven {
+//            name "local linphone-sdk maven repository"
+//            url file(LinphoneSdkBuildDir + '/maven_repository/')
+//            content {
+//                includeGroup "org.linphone"
+//            }
+//        }
+//
+//        maven { url "https://linphone.org/maven_repository"}
 
         // For "org.jlleitschuh.gradle:ktlint-gradle"
         mavenCentral()
     }
 }
 include ':app'
+include ':Linphones'
 rootProject.name='Linphone'

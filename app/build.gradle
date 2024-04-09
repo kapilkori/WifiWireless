@@ -70,7 +70,7 @@ dependencies {
     implementation 'androidx.media:media:1.6.0'
     implementation "androidx.security:security-crypto-ktx:1.1.0-alpha06"
     implementation "androidx.window:window:1.2.0"
-    implementation files('/libs/linphone 5.2.23.aar')
+    implementation project(':Linphones')
 
     def emoji_version = "1.4.0"
     implementation "androidx.emoji2:emoji2:$emoji_version"
@@ -134,7 +134,7 @@ afterEvaluate {
 
             groupId = 'com.github.kapilkori'
             artifactId = 'WW'
-            version = '0.0.7'
+            version = '0.0.8'
         }
     }
 }
