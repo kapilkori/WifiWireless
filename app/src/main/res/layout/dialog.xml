@@ -107,10 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="15dp"
-            android:gravity="center"
-            app:flexWrap="nowrap"
-            app:alignItems="center"
-            app:justifyContent="center">
+            android:gravity="center">
 
             <TextView
                 android:onClick="@{() -> viewModel.onCancelClicked()}"

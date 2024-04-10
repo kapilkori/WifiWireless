@@ -20,10 +20,7 @@
                 android:id="@+id/nav_host_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:name="androidx.navigation.fragment.NavHostFragment"
-                app:defaultNavHost="true"
-                app:navGraph="@navigation/main_nav_graph"
-                tools:layout="@layout/dialer_fragment" />
+                android:name="androidx.navigation.fragment.NavHostFragment" />
 
         </RelativeLayout>
 

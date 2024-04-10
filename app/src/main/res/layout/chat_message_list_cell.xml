@@ -153,10 +153,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:longClickable="true"
-                app:alignItems="center"
                 app:entries="@{data.contents}"
-                app:flexWrap="wrap"
-                app:justifyContent="@{data.chatMessage.outgoing ? JustifyContent.FLEX_END : JustifyContent.FLEX_START}"
                 app:layout="@{@layout/chat_message_content_cell}"
                 app:onLongClick="@{contextMenuClickListener}" />
 

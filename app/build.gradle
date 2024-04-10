@@ -8,10 +8,7 @@ plugins {
     id 'maven-publish'
 }
 
-def appVersionName = "5.2.3"
-
 def extractNativeLibs = false
-
 def packageName = "org.linphone"
 
 android {
@@ -51,6 +48,9 @@ android {
 
     buildFeatures {
         dataBinding = true
+    }
+    lint {
+        baseline = file("lint_baseline.xml")
     }
 
     namespace 'org.linphone'

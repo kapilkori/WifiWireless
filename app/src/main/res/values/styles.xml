@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <style name="AppSplashScreenTheme" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/dark_grey_color</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/vector_linphone_logo</item>
-        <item name="postSplashScreenTheme">@style/AppTheme</item>
+    <style name="AppSplashScreenTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+<!--        <item name="windowSplashScreenBackground">@color/dark_grey_color</item>-->
+<!--        <item name="windowSplashScreenAnimatedIcon">@drawable/vector_linphone_logo</item>-->
+<!--        <item name="postSplashScreenTheme">@style/AppTheme</item>-->
     </style>
 
     <!-- Base application theme. -->
@@ -81,8 +81,8 @@
         <item name="android:textColor">@android:color/transparent</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="layout_maxWidth">50dp</item>
-        <item name="layout_maxHeight">50dp</item>
+<!--        <item name="layout_maxWidth">50dp</item>-->
+<!--        <item name="layout_maxHeight">50dp</item>-->
     </style>
 
     <style name="call_numpad_digit" parent="@android:style/TextAppearance.Medium">

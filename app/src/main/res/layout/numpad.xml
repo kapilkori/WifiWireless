@@ -13,11 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp"
-        android:background="?attr/backgroundColor"
-        app:flexWrap="wrap"
-        app:justifyContent="space_around"
-        app:alignItems="center"
-        app:alignContent="space_around">
+        android:background="?attr/backgroundColor">
 
         <ImageView
             style="@style/numpad_digit"
@@ -40,7 +36,6 @@
 
         <ImageView
             style="@style/numpad_digit"
-            app:layout_wrapBefore="true"
             android:src="@drawable/numpad_four"
             android:contentDescription="@string/content_description_numpad_4"
             android:onClick="@{() -> keyListener.handleClick('4')}" />
@@ -59,7 +54,6 @@
 
         <ImageView
             style="@style/numpad_digit"
-            app:layout_wrapBefore="true"
             android:src="@drawable/numpad_seven"
             android:contentDescription="@string/content_description_numpad_7"
             android:onClick="@{() -> keyListener.handleClick('7')}" />
@@ -78,7 +72,6 @@
 
         <ImageView
             style="@style/numpad_digit"
-            app:layout_wrapBefore="true"
             android:src="@drawable/numpad_star_digit"
             android:contentDescription="@string/content_description_numpad_star"
             android:onClick="@{() -> keyListener.handleClick('*')}" />

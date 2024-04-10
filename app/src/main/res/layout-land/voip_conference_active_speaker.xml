@@ -153,11 +153,7 @@
                 android:id="@+id/flexbox_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:alignItems="stretch"
                 app:entries="@{conferenceViewModel.activeSpeakerConferenceParticipantDevices}"
-                app:flexDirection="column_reverse"
-                app:flexWrap="nowrap"
-                app:justifyContent="flex_start"
                 app:layout="@{@layout/voip_conference_participant_remote_active_speaker_miniature}" />
 
         </ScrollView>
