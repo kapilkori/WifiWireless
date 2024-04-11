@@ -2,8 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/call_nav_graph"
-    app:startDestination="@id/singleCallFragment">
+    android:id="@+id/call_nav_graph">
 
     <fragment
         android:id="@+id/singleCallFragment"
@@ -11,21 +10,16 @@
         tools:layout="@layout/voip_single_call_fragment"
         android:label="SingleCallFragment" >
         <action
-            android:id="@+id/action_singleCallFragment_to_callsListFragment"
-            app:destination="@id/callsListFragment" />
+            android:id="@+id/action_singleCallFragment_to_callsListFragment" />
         <action
-            android:id="@+id/action_singleCallFragment_to_conferenceParticipantsFragment"
-            app:destination="@id/conferenceParticipantsFragment" />
+            android:id="@+id/action_singleCallFragment_to_conferenceParticipantsFragment" />
         <action
-            android:id="@+id/action_singleCallFragment_to_chatFragment"
-            app:destination="@id/chatFragment" />
+            android:id="@+id/action_singleCallFragment_to_chatFragment" />
         <action
-            android:id="@+id/action_singleCallFragment_to_conferenceLayoutFragment"
-            app:destination="@id/conferenceLayoutFragment" />
+            android:id="@+id/action_singleCallFragment_to_conferenceLayoutFragment" />
     </fragment>
 
-    <action android:id="@+id/action_global_singleCallFragment"
-        app:destination="@id/singleCallFragment"/>
+    <action android:id="@+id/action_global_singleCallFragment" />
 
     <fragment
         android:id="@+id/conferenceCallFragment"
@@ -33,22 +27,17 @@
         tools:layout="@layout/voip_conference_call_fragment"
         android:label="ConferenceCallFragment" >
         <action
-            android:id="@+id/action_conferenceCallFragment_to_callsListFragment"
-            app:destination="@id/callsListFragment" />
+            android:id="@+id/action_conferenceCallFragment_to_callsListFragment" />
         <action
-            android:id="@+id/action_conferenceCallFragment_to_conferenceParticipantsFragment"
-            app:destination="@id/conferenceParticipantsFragment" />
+            android:id="@+id/action_conferenceCallFragment_to_conferenceParticipantsFragment" />
         <action
-            android:id="@+id/action_conferenceCallFragment_to_chatFragment"
-            app:destination="@id/chatFragment" />
+            android:id="@+id/action_conferenceCallFragment_to_chatFragment" />
         <action
-            android:id="@+id/action_conferenceCallFragment_to_conferenceLayoutFragment"
-            app:destination="@id/conferenceLayoutFragment" />
+            android:id="@+id/action_conferenceCallFragment_to_conferenceLayoutFragment" />
     </fragment>
 
     <action
-        android:id="@+id/action_global_conferenceCallFragment"
-        app:destination="@id/conferenceCallFragment"/>
+        android:id="@+id/action_global_conferenceCallFragment" />
 
     <fragment
         android:id="@+id/callsListFragment"
@@ -62,8 +51,7 @@
         tools:layout="@layout/voip_conference_participants_fragment"
         android:label="ConferenceParticipantsFragment" >
         <action
-            android:id="@+id/action_conferenceParticipantsFragment_to_conferenceAddParticipantsFragment"
-            app:destination="@id/conferenceAddParticipantsFragment" />
+            android:id="@+id/action_conferenceParticipantsFragment_to_conferenceAddParticipantsFragment" />
     </fragment>
 
     <fragment
@@ -71,14 +59,14 @@
         android:name="org.linphone.activities.voip.fragments.ChatFragment"
         tools:layout="@layout/voip_chat_fragment"
         android:label="ChatFragment" >
-        <argument
-            android:name="LocalSipUri"
-            app:argType="string"
-            app:nullable="true" />
-        <argument
-            android:name="RemoteSipUri"
-            app:argType="string"
-            app:nullable="true" />
+<!--        <argument-->
+<!--            android:name="LocalSipUri"-->
+<!--            app:argType="string"-->
+<!--            app:nullable="true" />-->
+<!--        <argument-->
+<!--            android:name="RemoteSipUri"-->
+<!--            app:argType="string"-->
+<!--            app:nullable="true" />-->
     </fragment>
 
     <fragment
@@ -87,8 +75,7 @@
         tools:layout="@layout/voip_call_outgoing_fragment"
         android:label="OutgoingCallFragment" />
 
-    <action android:id="@+id/action_global_outgoingCallFragment"
-        app:destination="@id/outgoingCallFragment" />
+    <action android:id="@+id/action_global_outgoingCallFragment" />
 
     <fragment
         android:id="@+id/incomingCallFragment"
@@ -96,8 +83,7 @@
         tools:layout="@layout/voip_call_incoming_fragment"
         android:label="IncomingCallFragment" />
 
-    <action android:id="@+id/action_global_incomingCallFragment"
-        app:destination="@id/incomingCallFragment" />
+    <action android:id="@+id/action_global_incomingCallFragment" />
 
     <fragment
         android:id="@+id/conferenceLayoutFragment"
@@ -111,8 +97,7 @@
         tools:layout="@layout/voip_conference_participants_add_fragment"
         android:label="ConferenceAddParticipantsFragment" >
         <action
-            android:id="@+id/action_conferenceAddParticipantsFragment_to_conferenceParticipantsFragment"
-            app:destination="@id/conferenceParticipantsFragment" />
+            android:id="@+id/action_conferenceAddParticipantsFragment_to_conferenceParticipantsFragment" />
     </fragment>
 
 </navigation>

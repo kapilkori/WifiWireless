@@ -9,23 +9,17 @@
         tools:layout="@layout/assistant_welcome_fragment"
         android:label="WelcomeFragment" >
         <action
-            android:id="@+id/action_welcomeFragment_to_accountLoginFragment"
-            app:destination="@id/accountLoginFragment" />
+            android:id="@+id/action_welcomeFragment_to_accountLoginFragment" />
         <action
-            android:id="@+id/action_welcomeFragment_to_emailAccountCreationFragment"
-            app:destination="@id/emailAccountCreationFragment" />
+            android:id="@+id/action_welcomeFragment_to_emailAccountCreationFragment" />
         <action
-            android:id="@+id/action_welcomeFragment_to_phoneAccountCreationFragment"
-            app:destination="@id/phoneAccountCreationFragment" />
+            android:id="@+id/action_welcomeFragment_to_phoneAccountCreationFragment" />
         <action
-            android:id="@+id/action_welcomeFragment_to_genericAccountWarningFragment"
-            app:destination="@id/genericAccountWarningFragment" />
+            android:id="@+id/action_welcomeFragment_to_genericAccountWarningFragment" />
         <action
-            android:id="@+id/action_welcomeFragment_to_remoteProvisioningFragment"
-            app:destination="@id/remoteProvisioningFragment" />
+            android:id="@+id/action_welcomeFragment_to_remoteProvisioningFragment" />
         <action
-            android:id="@+id/action_welcomeFragment_to_noPushWarningFragment"
-            app:destination="@id/noPushWarningFragment" />
+            android:id="@+id/action_welcomeFragment_to_noPushWarningFragment" />
     </fragment>
     <fragment
         android:id="@+id/accountLoginFragment"
@@ -33,11 +27,9 @@
         tools:layout="@layout/assistant_account_login_fragment"
         android:label="AccountLoginFragment" >
         <action
-            android:id="@+id/action_accountLoginFragment_to_echoCancellerCalibrationFragment"
-            app:destination="@id/echoCancellerCalibrationFragment" />
+            android:id="@+id/action_accountLoginFragment_to_echoCancellerCalibrationFragment" />
         <action
-            android:id="@+id/action_accountLoginFragment_to_phoneAccountValidationFragment"
-            app:destination="@id/phoneAccountValidationFragment" />
+            android:id="@+id/action_accountLoginFragment_to_phoneAccountValidationFragment" />
     </fragment>
     <fragment
         android:id="@+id/genericAccountWarningFragment"
@@ -45,8 +37,7 @@
         tools:layout="@layout/assistant_generic_account_warning_fragment"
         android:label="GenericAccountWarningFragment" >
         <action
-            android:id="@+id/action_genericAccountWarningFragment_to_genericAccountLoginFragment"
-            app:destination="@id/genericAccountLoginFragment" />
+            android:id="@+id/action_genericAccountWarningFragment_to_genericAccountLoginFragment" />
     </fragment>
     <fragment
         android:id="@+id/genericAccountLoginFragment"
@@ -54,8 +45,7 @@
         tools:layout="@layout/assistant_generic_account_login_fragment"
         android:label="GenericAccountLoginFragment" >
         <action
-            android:id="@+id/action_genericAccountLoginFragment_to_echoCancellerCalibrationFragment"
-            app:destination="@id/echoCancellerCalibrationFragment" />
+            android:id="@+id/action_genericAccountLoginFragment_to_echoCancellerCalibrationFragment" />
     </fragment>
     <fragment
         android:id="@+id/remoteProvisioningFragment"
@@ -63,11 +53,9 @@
         tools:layout="@layout/assistant_remote_provisioning_fragment"
         android:label="RemoteProvisioningFragment" >
         <action
-            android:id="@+id/action_remoteProvisioningFragment_to_qrCodeFragment"
-            app:destination="@id/qrCodeFragment" />
+            android:id="@+id/action_remoteProvisioningFragment_to_qrCodeFragment" />
         <action
-            android:id="@+id/action_remoteProvisioningFragment_to_echoCancellerCalibrationFragment"
-            app:destination="@id/echoCancellerCalibrationFragment" />
+            android:id="@+id/action_remoteProvisioningFragment_to_echoCancellerCalibrationFragment" />
     </fragment>
     <fragment
         android:id="@+id/emailAccountCreationFragment"
@@ -75,8 +63,7 @@
         tools:layout="@layout/assistant_email_account_creation_fragment"
         android:label="EmailAccountCreationFragment" >
         <action
-            android:id="@+id/action_emailAccountCreationFragment_to_emailAccountValidationFragment"
-            app:destination="@id/emailAccountValidationFragment" />
+            android:id="@+id/action_emailAccountCreationFragment_to_emailAccountValidationFragment" />
     </fragment>
     <fragment
         android:id="@+id/emailAccountValidationFragment"
@@ -84,8 +71,7 @@
         tools:layout="@layout/assistant_email_account_validation_fragment"
         android:label="EmailAccountValidationFragment" >
         <action
-            android:id="@+id/action_emailAccountValidationFragment_to_phoneAccountLinkingFragment"
-            app:destination="@id/phoneAccountLinkingFragment" />
+            android:id="@+id/action_emailAccountValidationFragment_to_phoneAccountLinkingFragment" />
     </fragment>
     <fragment
         android:id="@+id/phoneAccountCreationFragment"
@@ -93,8 +79,7 @@
         tools:layout="@layout/assistant_phone_account_creation_fragment"
         android:label="PhoneAccountCreationFragment" >
         <action
-            android:id="@+id/action_phoneAccountCreationFragment_to_phoneAccountValidationFragment"
-            app:destination="@id/phoneAccountValidationFragment" />
+            android:id="@+id/action_phoneAccountCreationFragment_to_phoneAccountValidationFragment" />
     </fragment>
     <fragment
         android:id="@+id/phoneAccountValidationFragment"
@@ -102,20 +87,19 @@
         tools:layout="@layout/assistant_phone_account_validation_fragment"
         android:label="PhoneAccountValidationFragment" >
         <action
-            android:id="@+id/action_phoneAccountValidationFragment_to_echoCancellerCalibrationFragment"
-            app:destination="@id/echoCancellerCalibrationFragment" />
-        <argument
-            android:name="PhoneNumber"
-            app:argType="string" />
-        <argument
-            android:name="IsLogin"
-            app:argType="boolean" />
-        <argument
-            android:name="IsCreation"
-            app:argType="boolean" />
-        <argument
-            android:name="IsLinking"
-            app:argType="boolean" />
+            android:id="@+id/action_phoneAccountValidationFragment_to_echoCancellerCalibrationFragment" />
+<!--        <argument-->
+<!--            android:name="PhoneNumber"-->
+<!--            app:argType="string" />-->
+<!--        <argument-->
+<!--            android:name="IsLogin"-->
+<!--            app:argType="boolean" />-->
+<!--        <argument-->
+<!--            android:name="IsCreation"-->
+<!--            app:argType="boolean" />-->
+<!--        <argument-->
+<!--            android:name="IsLinking"-->
+<!--            app:argType="boolean" />-->
     </fragment>
     <fragment
         android:id="@+id/qrCodeFragment"
@@ -132,37 +116,35 @@
         tools:layout="@layout/assistant_phone_account_linking_fragment"
         android:name="org.linphone.activities.assistant.fragments.PhoneAccountLinkingFragment"
         android:label="PhoneAccountLinkingFragment" >
-        <argument
-            android:name="Username"
-            app:argType="string" />
-        <argument
-            android:name="Password"
-            app:argType="string"
-            app:nullable="true" />
-        <argument
-            android:name="HA1"
-            app:argType="string"
-            app:nullable="true" />
+<!--        <argument-->
+<!--            android:name="Username"-->
+<!--            app:argType="string" />-->
+<!--        <argument-->
+<!--            android:name="Password"-->
+<!--            app:argType="string"-->
+<!--            app:nullable="true" />-->
+<!--        <argument-->
+<!--            android:name="HA1"-->
+<!--            app:argType="string"-->
+<!--            app:nullable="true" />-->
         <action
-            android:id="@+id/action_phoneAccountLinkingFragment_to_phoneAccountValidationFragment"
-            app:destination="@id/phoneAccountValidationFragment" >
-            <argument
-                android:name="IsCreation"
-                android:defaultValue="false" />
-            <argument
-                android:name="IsLinking"
-                android:defaultValue="false" />
-            <argument
-                android:name="IsLogin"
-                android:defaultValue="false" />
+            android:id="@+id/action_phoneAccountLinkingFragment_to_phoneAccountValidationFragment" >
+<!--            <argument-->
+<!--                android:name="IsCreation"-->
+<!--                android:defaultValue="false" />-->
+<!--            <argument-->
+<!--                android:name="IsLinking"-->
+<!--                android:defaultValue="false" />-->
+<!--            <argument-->
+<!--                android:name="IsLogin"-->
+<!--                android:defaultValue="false" />-->
         </action>
-        <argument
-            android:name="AllowSkip"
-            app:argType="boolean"
-            android:defaultValue="false" />
+<!--        <argument-->
+<!--            android:name="AllowSkip"-->
+<!--            app:argType="boolean"-->
+<!--            android:defaultValue="false" />-->
         <action
-            android:id="@+id/action_phoneAccountLinkingFragment_to_echoCancellerCalibrationFragment"
-            app:destination="@id/echoCancellerCalibrationFragment" />
+            android:id="@+id/action_phoneAccountLinkingFragment_to_echoCancellerCalibrationFragment" />
     </fragment>
     <fragment
         android:id="@+id/noPushWarningFragment"

@@ -14,9 +14,7 @@
     <!-- Width MUST BE 0dp, otherwise column width will be broken when mute mic icon will be show! -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
-        android:layout_height="@dimen/voip_conference_audio_only_participant_cell_height"
-        app:layout_columnWeight="1"
-        app:layout_gravity="fill_horizontal">
+        android:layout_height="@dimen/voip_conference_audio_only_participant_cell_height">
 
         <View
             android:id="@+id/view"

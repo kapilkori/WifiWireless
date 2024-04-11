@@ -202,9 +202,7 @@
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="300dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            linphone:defaultNavHost="false"
-            linphone:navGraph="@navigation/settings_nav_graph"/>
+            android:layout_weight="1"/>
 
     </androidx.slidingpanelayout.widget.SlidingPaneLayout>
 

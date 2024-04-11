@@ -2,8 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/settings_nav_graph_xml"
-    app:startDestination="@id/emptySettingsFragment">
+    android:id="@+id/settings_nav_graph_xml">
 
     <fragment
         android:id="@+id/emptySettingsFragment"
@@ -11,20 +10,18 @@
         tools:layout="@layout/empty_fragment"
         android:label="EmptySettingsFragment" />
 
-    <action android:id="@+id/action_global_emptySettingsFragment"
-        app:destination="@id/emptySettingsFragment" />
+    <action android:id="@+id/action_global_emptySettingsFragment" />
 
     <fragment
         android:id="@+id/accountSettingsFragment"
         android:name="org.linphone.activities.main.settings.fragments.AccountSettingsFragment"
         tools:layout="@layout/settings_account_fragment"
         android:label="AccountSettingsFragment" >
-        <argument
-            android:name="Identity"
-            app:argType="string" />
+<!--        <argument-->
+<!--            android:name="Identity"-->
+<!--            app:argType="string" />-->
         <action
-            android:id="@+id/action_accountSettingsFragment_to_phoneAccountLinkingFragment"
-            app:destination="@id/phoneAccountLinkingFragment" />
+            android:id="@+id/action_accountSettingsFragment_to_phoneAccountLinkingFragment" />
     </fragment>
     <fragment
         android:id="@+id/advancedSettingsFragment"
@@ -52,8 +49,7 @@
         tools:layout="@layout/settings_contacts_fragment"
         android:label="ContactsSettingsFragment" >
         <action
-            android:id="@+id/action_contactsSettingsFragment_to_ldapSettingsFragment"
-            app:destination="@id/ldapSettingsFragment" />
+            android:id="@+id/action_contactsSettingsFragment_to_ldapSettingsFragment" />
     </fragment>
     <fragment
         android:id="@+id/networkSettingsFragment"
@@ -71,54 +67,43 @@
         tools:layout="@layout/settings_tunnel_fragment"
         android:label="TunnelSettingsFragment" />
     <action
-        android:id="@+id/action_global_tunnelSettingsFragment"
-        app:destination="@id/tunnelSettingsFragment" />
+        android:id="@+id/action_global_tunnelSettingsFragment" />
     <action
-        android:id="@+id/action_global_videoSettingsFragment"
-        app:destination="@id/videoSettingsFragment" />
+        android:id="@+id/action_global_videoSettingsFragment" />
     <action
-        android:id="@+id/action_global_callSettingsFragment"
-        app:destination="@id/callSettingsFragment" />
+        android:id="@+id/action_global_callSettingsFragment" />
     <action
-        android:id="@+id/action_global_networkSettingsFragment"
-        app:destination="@id/networkSettingsFragment" />
+        android:id="@+id/action_global_networkSettingsFragment" />
     <action
-        android:id="@+id/action_global_chatSettingsFragment"
-        app:destination="@id/chatSettingsFragment" />
+        android:id="@+id/action_global_chatSettingsFragment" />
     <action
-        android:id="@+id/action_global_contactsSettingsFragment"
-        app:destination="@id/contactsSettingsFragment" />
+        android:id="@+id/action_global_contactsSettingsFragment" />
     <action
-        android:id="@+id/action_global_accountSettingsFragment"
-        app:destination="@id/accountSettingsFragment" />
+        android:id="@+id/action_global_accountSettingsFragment" />
     <action
-        android:id="@+id/action_global_advancedSettingsFragment"
-        app:destination="@id/advancedSettingsFragment" />
+        android:id="@+id/action_global_advancedSettingsFragment" />
     <action
-        android:id="@+id/action_global_conferencesSettingsFragment"
-        app:destination="@id/conferencesSettingsFragment"/>
+        android:id="@+id/action_global_conferencesSettingsFragment" />
     <action
-        android:id="@+id/action_global_audioSettingsFragment"
-        app:destination="@id/audioSettingsFragment" />
+        android:id="@+id/action_global_audioSettingsFragment" />
     <fragment
         android:id="@+id/phoneAccountLinkingFragment"
         tools:layout="@layout/assistant_phone_account_linking_fragment"
         android:name="org.linphone.activities.assistant.fragments.PhoneAccountLinkingFragment"
         android:label="PhoneAccountLinkingFragment" >
         <action
-            android:id="@+id/action_phoneAccountLinkingFragment_to_phoneAccountValidationFragment"
-            app:destination="@id/phoneAccountValidationFragment" />
-        <argument
-            android:name="Username"
-            app:argType="string" />
-        <argument
-            android:name="Password"
-            app:argType="string"
-            app:nullable="true" />
-        <argument
-            android:name="HA1"
-            app:argType="string"
-            app:nullable="true" />
+            android:id="@+id/action_phoneAccountLinkingFragment_to_phoneAccountValidationFragment" />
+<!--        <argument-->
+<!--            android:name="Username"-->
+<!--            app:argType="string" />-->
+<!--        <argument-->
+<!--            android:name="Password"-->
+<!--            app:argType="string"-->
+<!--            app:nullable="true" />-->
+<!--        <argument-->
+<!--            android:name="HA1"-->
+<!--            app:argType="string"-->
+<!--            app:nullable="true" />-->
     </fragment>
     <fragment
         android:id="@+id/phoneAccountValidationFragment"
@@ -126,20 +111,19 @@
         android:name="org.linphone.activities.assistant.fragments.PhoneAccountValidationFragment"
         android:label="PhoneAccountValidationFragment" >
         <action
-            android:id="@+id/action_phoneAccountValidationFragment_to_accountSettingsFragment"
-            app:destination="@id/accountSettingsFragment" />
-        <argument
-            android:name="PhoneNumber"
-            app:argType="string" />
-        <argument
-            android:name="IsLogin"
-            app:argType="boolean" />
-        <argument
-            android:name="IsCreation"
-            app:argType="boolean" />
-        <argument
-            android:name="IsLinking"
-            app:argType="boolean" />
+            android:id="@+id/action_phoneAccountValidationFragment_to_accountSettingsFragment" />
+<!--        <argument-->
+<!--            android:name="PhoneNumber"-->
+<!--            app:argType="string" />-->
+<!--        <argument-->
+<!--            android:name="IsLogin"-->
+<!--            app:argType="boolean" />-->
+<!--        <argument-->
+<!--            android:name="IsCreation"-->
+<!--            app:argType="boolean" />-->
+<!--        <argument-->
+<!--            android:name="IsLinking"-->
+<!--            app:argType="boolean" />-->
     </fragment>
     <fragment
         android:id="@+id/ldapSettingsFragment"

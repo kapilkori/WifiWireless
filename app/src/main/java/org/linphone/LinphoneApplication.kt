@@ -22,19 +22,10 @@ package org.linphone
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
-import coil.ImageLoader
-import coil.ImageLoaderFactory
-import coil.decode.GifDecoder
-import coil.decode.ImageDecoderDecoder
-import coil.decode.SvgDecoder
-import coil.decode.VideoFrameDecoder
-import coil.disk.DiskCache
-import coil.memory.MemoryCache
 import org.linphone.core.*
 import org.linphone.core.tools.Log
-import org.linphone.mediastream.Version
 
-class LinphoneApplication : Application(), ImageLoaderFactory {
+class LinphoneApplication : Application() {
     companion object {
         @SuppressLint("StaticFieldLeak")
         lateinit var corePreferences: CorePreferences
@@ -116,28 +107,28 @@ class LinphoneApplication : Application(), ImageLoaderFactory {
         Log.i("[Application] Created")
     }
 
-    override fun newImageLoader(): ImageLoader {
-        return ImageLoader.Builder(this)
-            .components {
-                add(VideoFrameDecoder.Factory())
-                add(SvgDecoder.Factory())
-                if (Version.sdkAboveOrEqual(Version.API28_PIE_90)) {
-                    add(ImageDecoderDecoder.Factory())
-                } else {
-                    add(GifDecoder.Factory())
-                }
-            }
-            .memoryCache {
-                MemoryCache.Builder(this)
-                    .maxSizePercent(0.25)
-                    .build()
-            }
-            .diskCache {
-                DiskCache.Builder()
-                    .directory(cacheDir.resolve("image_cache"))
-                    .maxSizePercent(0.02)
-                    .build()
-            }
-            .build()
-    }
+//    override fun newImageLoader(): ImageLoader {
+//        return ImageLoader.Builder(this)
+//            .components {
+//                add(VideoFrameDecoder.Factory())
+//                add(SvgDecoder.Factory())
+//                if (Version.sdkAboveOrEqual(Version.API28_PIE_90)) {
+//                    add(ImageDecoderDecoder.Factory())
+//                } else {
+//                    add(GifDecoder.Factory())
+//                }
+//            }
+//            .memoryCache {
+//                MemoryCache.Builder(this)
+//                    .maxSizePercent(0.25)
+//                    .build()
+//            }
+//            .diskCache {
+//                DiskCache.Builder()
+//                    .directory(cacheDir.resolve("image_cache"))
+//                    .maxSizePercent(0.02)
+//                    .build()
+//            }
+//            .build()
+//    }
 }

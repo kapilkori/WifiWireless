@@ -136,9 +136,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:entries="@{conferenceViewModel.conferenceParticipantDevices}"
-                app:layout="@{@layout/voip_conference_participant_remote_audio_only}"
-                app:columnCount="2"
-                app:orientation="horizontal" />
+                app:layout="@{@layout/voip_conference_participant_remote_audio_only}" />
 
         </ScrollView>
 
